@@ -6,7 +6,7 @@ function updateCountdown(targetDate, ids, endMessage) {
     const distance = targetDate - now;
 
     if (distance < 0) {
-        // Show end message if countdown is over
+        // end msg
         for (const id of Object.values(ids)) {
             document.getElementById(id).innerText = '';
         }
@@ -29,7 +29,7 @@ function animateUpdate(id, value) {
     const el = document.getElementById(id);
     if (el.innerText != value) {
         el.classList.remove('animate');
-        void el.offsetWidth; // trigger reflow
+        void el.offsetWidth; // black
         el.innerText = value;
         el.classList.add('animate');
     }
