@@ -1,10 +1,29 @@
 body {
-    background: #1e1e2f;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px 20px 150px;
     margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive, monospace;
+    overflow-x: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.5) blur(2px);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px 150px;
+    background: rgba(30, 30, 47, 0.6);
+    min-height: 100vh;
 }
 
 h1 {
@@ -38,27 +57,24 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     font-size: 2rem;
+    pointer-events: none;
 }
 
 .countdown div {
     padding: 20px 15px;
     border-radius: 10px;
-    transition: transform 0.3s;
-    cursor: default;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-}
-
-.countdown div:hover {
-    transform: scale(1.05);
+    transition: none;
 }
 
 .countdown div div {
     font-weight: 700;
     font-size: 2rem;
-    transition: transform 0.6s ease;
+    transition: transform 1s ease;
+    image-rendering: pixelated;
 }
 
 .countdown span {
@@ -68,6 +84,7 @@ h1 {
 
 .animate {
     transform: rotateX(360deg);
+    transition-duration: 1s;
 }
 
 .countdown-container.blue {
@@ -98,7 +115,6 @@ h1 {
     right: 15px;
     font-size: 0.8rem;
     color: #ff69b4;
-    font-family: Arial, sans-serif;
     user-select: none;
     pointer-events: none;
     opacity: 0.8;
@@ -114,123 +130,4 @@ audio#bgMusic {
     opacity: 0.9;
     border-radius: 10px;
     border: 2px solid #444;
-}
-
-@media (max-width: 1400px) {
-    .container {
-        grid-template-columns: 1fr;
-        gap: 60px;
-        max-width: 400px;
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 30px 15px 120px;
-    }
-    
-    h1 {
-        font-size: 2.2rem;
-        margin-bottom: 30px;
-    }
-    
-    .container {
-        gap: 40px;
-        max-width: 350px;
-        padding: 0 15px;
-    }
-    
-    .countdown-container {
-        padding: 25px 15px;
-    }
-    
-    .countdown-container h2 {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-    
-    .countdown {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        font-size: 1.4rem;
-    }
-    
-    .countdown div {
-        padding: 15px 10px;
-    }
-    
-    .countdown div div {
-        font-size: 1.4rem;
-    }
-    
-    .countdown span {
-        font-size: 0.8rem;
-    }
-    
-    audio#bgMusic {
-        width: 260px;
-        bottom: 15px;
-    }
-    
-    .mwa {
-        bottom: 10px;
-        right: 10px;
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 20px 10px 100px;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-    }
-    
-    .container {
-        gap: 30px;
-        max-width: 300px;
-        padding: 0 10px;
-    }
-    
-    .countdown-container {
-        padding: 20px 12px;
-    }
-    
-    .countdown-container h2 {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
-    
-    .countdown {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        font-size: 1.2rem;
-    }
-    
-    .countdown div {
-        padding: 12px 8px;
-    }
-    
-    .countdown div div {
-        font-size: 1.2rem;
-    }
-    
-    .countdown span {
-        font-size: 0.7rem;
-    }
-    
-    audio#bgMusic {
-        width: 220px;
-        bottom: 10px;
-    }
-    
-    .mwa {
-        bottom: 8px;
-        right: 8px;
-        font-size: 0.6rem;
-    }
 }
