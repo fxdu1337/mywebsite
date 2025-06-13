@@ -31,3 +31,16 @@ h1 {
     margin-top: 10px;
     color: #aaa;
 }
+
+/* Corner */
+.mwa {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #ff69b4; /* pretty pink cus ur pink somewhere else :3  */
+    font-family: 'Arial', sans-serif;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.8;
+}
