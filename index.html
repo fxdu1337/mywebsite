@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>@fxdu</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page supports dark color scheme -->
+    <meta name="color-scheme" content="dark">
+    <!-- Add ?demo in URL to trigger 10-second countdown demo -->
+    <title>Birthdays Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="video-background">
-    <video autoplay muted loop playsinline>
-        <source src="19558d07d8c40-master_playlist.mov" type="video/mp4">
-    </video>
-</div>
-<div class="overlay"></div>
 
-<div class="content">
-    <h1>LOOK!!! OUR BDAYS MY LOVEEE :33333</h1>
 
-    <div class="container">
-        <div class="countdown-container blue">
-            <h2>MY BDAY!!! :3</h2>
+    <main class="container">
+        <div class="countdown-container">
+            <h2>Time left until my Birthday :3 </h2>
+
+            <p class="countdown-title">The day is coming in:</p>
             <div class="countdown" id="countdown1">
-                <div>
-                    <div id="days1">0</div><span>Days</span>
-                </div>
-                <div>
-                    <div id="hours1">0</div><span>Hours</span>
-                </div>
-                <div>
-                    <div id="minutes1">0</div><span>Minutes</span>
-                </div>
-                <div>
-                    <div id="seconds1">0</div><span>Seconds</span>
-                </div>
+                <div class="time-box"><span id="days1">00</span><label>Days</label></div>
+                <div class="time-box"><span id="hours1">00</span><label>Hours</label></div>
+                <div class="time-box"><span id="minutes1">00</span><label>Minutes</label></div>
+                <div class="time-box"><span id="seconds1">00</span><label>Seconds</label></div>
+            </div>
+            <div class="reveal-message" id="reveal1">
+                <h2>Happy Birthday!</h2>
+                <p>Hope you have a wonderful day!</p>
             </div>
         </div>
 
-        <div class="countdown-container pink">
-            <h2>MY SWEET GIRL'S BDAY!!! :3</h2>
+        <div class="countdown-container">
+            <h2>Time left until my babies Birthday :3 💕</h2>
+
+            <p class="countdown-title">the day is coming in:</p>
             <div class="countdown" id="countdown2">
-                <div>
-                    <div id="days2">0</div><span>Days</span>
-                </div>
-                <div>
-                    <div id="hours2">0</div><span>Hours</span>
-                </div>
-                <div>
-                    <div id="minutes2">0</div><span>Minutes</span>
-                </div>
-                <div>
-                    <div id="seconds2">0</div><span>Seconds</span>
-                </div>
+                <div class="time-box"><span id="days2">00</span><label>Days</label></div>
+                <div class="time-box"><span id="hours2">00</span><label>Hours</label></div>
+                <div class="time-box"><span id="minutes2">00</span><label>Minutes</label></div>
+                <div class="time-box"><span id="seconds2">00</span><label>Seconds</label></div>
+            </div>
+            <div class="reveal-message" id="reveal2">
+                <h2>Happy Birthday, my angel 💕</h2>
+                <p>You deserve the world!</p>
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="mwa">i love you princess 💕</div>
-    <audio id="bgMusic" src="LoversRock.mp3" autoplay loop controls></audio>
-</div>
+    <footer>
+        <div class="music-player">
+            <button id="play-pause-btn" class="player-btn"></button>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.2">
+        </div>
+        <div class="trademark"> 2025 @fxdu. All rights reserved.</div>
+    </footer>
 
-<script src="script.js"></script>
+    <audio id="bgMusic" src="LoversRock.mp3" loop></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
