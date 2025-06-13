@@ -1,0 +1,193 @@
+body {
+    background: #1e1e2f;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px 20px 150px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+/* side-by-side container */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.countdown-container {
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    user-select: none;
+}
+
+.countdown-container h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Countdown  */
+.countdown {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.countdown div {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-width: 80px;
+    transition: transform 0.5s;
+    cursor: default;
+    color: white;
+}
+
+.countdown div:hover {
+    transform: scale(1.1);
+}
+
+.countdown div div {
+    transition: transform 0.6s ease;
+}
+
+.animate {
+    transform: rotateX(360deg);
+}
+
+/* blue for your birthday */
+.countdown-container.blue {
+    background: #202a60;
+    box-shadow: 0 0 30px #5060ffcc;
+}
+
+.countdown-container.blue .countdown div {
+    background: #3140a8;
+    color: #a8c0ff;
+    box-shadow: 0 0 15px #5060ffcc;
+}
+
+/* pink for girlfriend's birthday */
+.countdown-container.pink {
+    background: #6e2148;
+    box-shadow: 0 0 30px #ff69b4cc;
+}
+
+.countdown-container.pink .countdown div {
+    background: #a3366d;
+    color: #ffb6d6;
+    box-shadow: 0 0 15px #ff69b4cc;
+}
+
+/* Love note corner */
+.mwa {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #ff69b4;
+    font-family: 'Arial', sans-serif;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Audio player styling */
+audio#bgMusic {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    outline: none;
+    opacity: 0.85;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #5060ffcc, 0 0 20px #ff69b4cc;
+    background: linear-gradient(90deg, #5060ffcc 0%, #ff69b4cc 100%);
+    border: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* increased gap to separate glow */
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.countdown-container {
+    flex: 0 0 350px; /* fixed width so they don't shrink */
+    max-width: 350px;
+    border-radius: 15px;
+    padding: 40px 25px; /* more padding */
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    user-select: none;
+}
+
+.countdown {
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.countdown div {
+    padding: 25px 20px; /* more padding so glow doesn’t overlap */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    min-width: 90px;
+    transition: transform 0.5s;
+    cursor: default;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown div:hover {
+    transform: scale(1.1);
+}
+
+.countdown div div {
+    transition: transform 0.6s ease;
+    font-weight: 700;
+    font-size: 2.6rem; /* bigger number */
+}
+
+.countdown span {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Blue container and countdown */
+.countdown-container.blue {
+    background: #202a60;
+    box-shadow: 0 0 35px #5060ffcc;
+}
+
+.countdown-container.blue .countdown div {
+    background: #3140a8;
+    color: #a8c0ff;
+    box-shadow: 0 0 20px #5060ffcc;
+}
+
+/* Pink container and countdown */
+.countdown-container.pink {
+    background: #6e2148;
+    box-shadow: 0 0 35px #ff69b4cc;
+}
+
+.countdown-container.pink .countdown div {
+    background: #a3366d;
+    color: #ffb6d6;
+    box-shadow: 0 0 20px #ff69b4cc;
+}
