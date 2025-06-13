@@ -26,7 +26,6 @@ body, html {
     object-fit: cover;
 }
 
-/* Dark overlay for better readability */
 .overlay {
     position: fixed;
     top: 0;
@@ -40,61 +39,61 @@ body, html {
 .content {
     position: relative;
     z-index: 1;
-    padding: 50px 20px 150px;
+    padding: 30px 10px 100px;
     min-height: 100vh;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 300px;
-    max-width: 1600px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 400px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 20px;
 }
 
 .countdown-container {
     border-radius: 15px;
-    padding: 30px 20px;
+    padding: 20px 15px;
     user-select: none;
 }
 
 .countdown-container h2 {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .countdown {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    font-size: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 1rem;
     pointer-events: none;
 }
 
 .countdown div {
-    padding: 20px 15px;
+    padding: 12px 8px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 .countdown div div {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.2rem;
     transition: transform 1s ease;
 }
 
 .countdown span {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     opacity: 0.9;
 }
 
@@ -127,9 +126,9 @@ h1 {
 
 .mwa {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    font-size: 0.8rem;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.6rem;
     color: #ff69b4;
     user-select: none;
     pointer-events: none;
@@ -138,14 +137,54 @@ h1 {
 
 audio#bgMusic {
     position: fixed;
-    bottom: 20px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 320px;
+    width: 220px;
     outline: none;
     opacity: 0.9;
     border-radius: 10px;
     border: 2px solid #444;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        gap: 60px;
+        padding: 0 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .countdown-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 1.5rem;
+    }
+
+    .countdown div div {
+        font-size: 1.8rem;
+    }
+
+    .countdown span {
+        font-size: 0.8rem;
+    }
+
+    .mwa {
+        font-size: 0.7rem;
+    }
+
+    audio#bgMusic {
+        width: 280px;
+        bottom: 20px;
+    }
 }
 
 
