@@ -12,80 +12,97 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* side-by-side container */
+/* Container with much more space */
 .container {
     display: flex;
-    justify-content: center;
-    gap: 60px;
+    justify-content: space-around; /* Changed to space-around for better distribution */
+    gap: 200px; /* Massive gap to prevent any overlap */
     flex-wrap: wrap;
+    padding: 0 40px; /* More side padding */
+    max-width: 1400px; /* Container max width */
+    margin: 0 auto; /* Center the container */
 }
 
 .countdown-container {
-    flex: 1 1 300px;
-    max-width: 400px;
+    flex: 0 0 300px; /* Fixed smaller width */
+    max-width: 300px;
     border-radius: 15px;
-    padding: 30px 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    padding: 30px 20px; /* Reduced padding */
+    box-shadow: 0 0 15px rgba(0,0,0,0.7); /* Much smaller glow */
     user-select: none;
+    margin: 0 20px; /* Extra margin on sides */
 }
 
 .countdown-container h2 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-weight: 600;
+    font-size: 1.5rem; /* Slightly smaller title */
 }
 
-/* Countdown  */
+/* Countdown with tighter spacing */
 .countdown {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Smaller font */
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 12px; /* Much smaller gap */
+    flex-wrap: wrap;
 }
 
 .countdown div {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    min-width: 80px;
-    transition: transform 0.5s;
+    padding: 15px 10px; /* Much smaller padding */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Minimal shadow */
+    min-width: 55px; /* Smaller width */
+    transition: transform 0.3s;
     cursor: default;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .countdown div:hover {
-    transform: scale(1.1);
+    transform: scale(1.03); /* Very subtle hover */
 }
 
 .countdown div div {
     transition: transform 0.6s ease;
+    font-weight: 700;
+    font-size: 1.8rem; /* Smaller numbers */
+}
+
+.countdown span {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .animate {
     transform: rotateX(360deg);
 }
 
-/* blue for your birthday */
+/* Blue container - minimal glow */
 .countdown-container.blue {
     background: #202a60;
-    box-shadow: 0 0 30px #5060ffcc;
+    box-shadow: 0 0 10px #5060ff66; /* Much weaker glow */
 }
 
 .countdown-container.blue .countdown div {
     background: #3140a8;
     color: #a8c0ff;
-    box-shadow: 0 0 15px #5060ffcc;
+    box-shadow: 0 0 3px #5060ff44; /* Barely visible glow */
 }
 
-/* pink for girlfriend's birthday */
+/* Pink container - minimal glow */
 .countdown-container.pink {
     background: #6e2148;
-    box-shadow: 0 0 30px #ff69b4cc;
+    box-shadow: 0 0 10px #ff69b466; /* Much weaker glow */
 }
 
 .countdown-container.pink .countdown div {
     background: #a3366d;
     color: #ffb6d6;
-    box-shadow: 0 0 15px #ff69b4cc;
+    box-shadow: 0 0 3px #ff69b444; /* Barely visible glow */
 }
 
 /* Love note corner */
@@ -107,87 +124,50 @@ audio#bgMusic {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 350px;
+    width: 300px; /* Smaller player */
     outline: none;
     opacity: 0.85;
     border-radius: 12px;
-    box-shadow: 0 0 20px #5060ffcc, 0 0 20px #ff69b4cc;
-    background: linear-gradient(90deg, #5060ffcc 0%, #ff69b4cc 100%);
+    box-shadow: 0 0 10px #5060ff44, 0 0 10px #ff69b444; /* Minimal glow */
+    background: linear-gradient(90deg, #5060ff44 0%, #ff69b444 100%);
     border: none;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 80px; /* increased gap to separate glow */
-    flex-wrap: wrap;
-    padding: 0 20px;
+
+/* Responsive - stack vertically on smaller screens */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        max-width: 100%;
+    }
+    
+    .countdown-container {
+        margin: 20px 0;
+    }
 }
 
-.countdown-container {
-    flex: 0 0 350px; /* fixed width so they don't shrink */
-    max-width: 350px;
-    border-radius: 15px;
-    padding: 40px 25px; /* more padding */
-    box-shadow: 0 0 25px rgba(0,0,0,0.7);
-    user-select: none;
-}
-
-.countdown {
-    font-size: 2.8rem;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.countdown div {
-    padding: 25px 20px; /* more padding so glow doesn’t overlap */
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    min-width: 90px;
-    transition: transform 0.5s;
-    cursor: default;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.countdown div:hover {
-    transform: scale(1.1);
-}
-
-.countdown div div {
-    transition: transform 0.6s ease;
-    font-weight: 700;
-    font-size: 2.6rem; /* bigger number */
-}
-
-.countdown span {
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
-
-/* Blue container and countdown */
-.countdown-container.blue {
-    background: #202a60;
-    box-shadow: 0 0 35px #5060ffcc;
-}
-
-.countdown-container.blue .countdown div {
-    background: #3140a8;
-    color: #a8c0ff;
-    box-shadow: 0 0 20px #5060ffcc;
-}
-
-/* Pink container and countdown */
-.countdown-container.pink {
-    background: #6e2148;
-    box-shadow: 0 0 35px #ff69b4cc;
-}
-
-.countdown-container.pink .countdown div {
-    background: #a3366d;
-    color: #ffb6d6;
-    box-shadow: 0 0 20px #ff69b4cc;
+@media (max-width: 768px) {
+    .container {
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .countdown {
+        gap: 8px;
+        font-size: 1.8rem;
+    }
+    
+    .countdown div {
+        min-width: 45px;
+        padding: 12px 8px;
+    }
+    
+    .countdown div div {
+        font-size: 1.5rem;
+    }
+    
+    .countdown span {
+        font-size: 0.8rem;
+    }
 }
