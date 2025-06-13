@@ -12,7 +12,7 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* sidebyside */
+/* side-by-side container */
 .container {
     display: flex;
     justify-content: center;
@@ -64,7 +64,7 @@ h1 {
     transform: rotateX(360deg);
 }
 
-/* blue for me */
+/* blue for your birthday */
 .countdown-container.blue {
     background: #202a60;
     box-shadow: 0 0 30px #5060ffcc;
@@ -76,7 +76,7 @@ h1 {
     box-shadow: 0 0 15px #5060ffcc;
 }
 
-/* PINK FOR HERRRRRRRR */
+/* pink for girlfriend's birthday */
 .countdown-container.pink {
     background: #6e2148;
     box-shadow: 0 0 30px #ff69b4cc;
@@ -88,7 +88,7 @@ h1 {
     box-shadow: 0 0 15px #ff69b4cc;
 }
 
-/* Corner */
+/* Love note corner */
 .mwa {
     position: fixed;
     bottom: 10px;
@@ -101,7 +101,7 @@ h1 {
     opacity: 0.8;
 }
 
-/* AudioPlayer! */
+/* Audio player styling */
 audio#bgMusic {
     position: fixed;
     bottom: 20px;
