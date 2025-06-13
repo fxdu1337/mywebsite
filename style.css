@@ -3,21 +3,43 @@ body {
     color: #fff;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    padding-top: 100px;
+    padding: 50px 20px 150px;
     margin: 0;
 }
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
+/* sidebyside */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.countdown-container {
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    user-select: none;
+}
+
+.countdown-container h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Countdown  */
 .countdown {
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 50px;
 }
 
 .countdown div {
@@ -27,6 +49,7 @@ h1 {
     min-width: 80px;
     transition: transform 0.5s;
     cursor: default;
+    color: white;
 }
 
 .countdown div:hover {
@@ -41,23 +64,26 @@ h1 {
     transform: rotateX(360deg);
 }
 
-.countdown span {
-    display: block;
-    font-size: 1rem;
-    margin-top: 10px;
-    color: #aaa;
+/* blue for me */
+.countdown-container.blue {
+    background: #202a60;
+    box-shadow: 0 0 30px #5060ffcc;
 }
 
-/* blue for me */
-.countdown.blue div {
-    background: #202a60;
+.countdown-container.blue .countdown div {
+    background: #3140a8;
     color: #a8c0ff;
     box-shadow: 0 0 15px #5060ffcc;
 }
 
-/* pink for my babys countdown */
-.countdown.pink div {
+/* PINK FOR HERRRRRRRR */
+.countdown-container.pink {
     background: #6e2148;
+    box-shadow: 0 0 30px #ff69b4cc;
+}
+
+.countdown-container.pink .countdown div {
+    background: #a3366d;
     color: #ffb6d6;
     box-shadow: 0 0 15px #ff69b4cc;
 }
@@ -75,12 +101,17 @@ h1 {
     opacity: 0.8;
 }
 
-/* Audio player style */
+/* AudioPlayer! */
 audio#bgMusic {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    width: 250px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.85;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #5060ffcc, 0 0 20px #ff69b4cc;
+    background: linear-gradient(90deg, #5060ffcc 0%, #ff69b4cc 100%);
+    border: none;
 }
