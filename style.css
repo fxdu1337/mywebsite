@@ -4,6 +4,7 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding-top: 100px;
+    margin: 0;
 }
 
 h1 {
@@ -16,13 +17,28 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 50px;
 }
 
 .countdown div {
-    background: #292941;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-width: 80px;
+    transition: transform 0.5s;
+    cursor: default;
+}
+
+.countdown div:hover {
+    transform: scale(1.1);
+}
+
+.countdown div div {
+    transition: transform 0.6s ease;
+}
+
+.animate {
+    transform: rotateX(360deg);
 }
 
 .countdown span {
@@ -32,15 +48,39 @@ h1 {
     color: #aaa;
 }
 
+/* blue for me */
+.countdown.blue div {
+    background: #202a60;
+    color: #a8c0ff;
+    box-shadow: 0 0 15px #5060ffcc;
+}
+
+/* pink for my babys countdown */
+.countdown.pink div {
+    background: #6e2148;
+    color: #ffb6d6;
+    box-shadow: 0 0 15px #ff69b4cc;
+}
+
 /* Corner */
 .mwa {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 0.8rem;
-    color: #ff69b4; /* pretty pink cus ur pink somewhere else :3  */
+    color: #ff69b4;
     font-family: 'Arial', sans-serif;
     user-select: none;
     pointer-events: none;
     opacity: 0.8;
+}
+
+/* Audio player style */
+audio#bgMusic {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 250px;
+    outline: none;
+    opacity: 0.7;
 }
