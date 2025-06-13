@@ -5,24 +5,34 @@ body {
     overflow-x: hidden;
     color: #fff;
     text-align: center;
+    background: #1e1e2f;
 }
 
-#bgVideo {
+/* Background Video Container */
+.video-background {
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     z-index: -1;
-    object-fit: cover;
-    filter: brightness(0.5) blur(2px);
 }
 
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) blur(1.5px);
+}
+
+/* Main content overlay */
 .content {
     position: relative;
     z-index: 1;
     padding: 50px 20px 150px;
-    background: rgba(30, 30, 47, 0.6);
+    backdrop-filter: blur(2px);
+    background: rgba(30, 30, 47, 0.4);
     min-height: 100vh;
 }
 
@@ -67,7 +77,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    transition: none;
 }
 
 .countdown div div {
@@ -131,6 +140,4 @@ audio#bgMusic {
     border-radius: 10px;
     border: 2px solid #444;
 }
-
-
 
